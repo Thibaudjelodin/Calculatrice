@@ -1,3 +1,18 @@
 <resources>
-    <string name="app_name">AppCalculatrice</string>
+    <string name="app_name" translatable="false">What Colour (2)</string>
+
+    <string name="colour_black">Black</string>
+    <string name="colour_blue">Blue</string>
+    <string name="colour_red">Red</string>
+    <string name="colour_purple">Purple</string>
+    <string name="colour_green">Green</string>
+    <string name="colour_cyan">Cyan</string>
+    <string name="colour_yellow">Yellow</string>
+    <string name="colour_white">White</string>
+    <string name="colour_brown">Brown</string>
+    <string name="colour_orange">Orange</string>
+    <string name="colour_pink">Pink</string>
+    <string name="colour_grey">Grey</string>
+
+
 </resources>
