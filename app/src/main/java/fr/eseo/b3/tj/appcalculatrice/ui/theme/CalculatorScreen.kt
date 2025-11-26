@@ -11,7 +11,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.compose.foundation.layout.Spacer
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.runtime.Composable
 
@@ -48,8 +47,8 @@ fun CalculatorScreen(modifier: Modifier = Modifier) {
             listOf("7", "8", "9", "÷"),
             listOf("4", "5", "6", "×"),
             listOf("1", "2", "3", "-"),
-            listOf("C", "0", ".", "+"),
-            listOf("=")
+            listOf("0", ".", "+", "⌫"),
+            listOf("C", "=")
         )
 
         Column(
@@ -64,12 +63,27 @@ fun CalculatorScreen(modifier: Modifier = Modifier) {
                     horizontalArrangement = Arrangement.spacedBy(8.dp)
                 ) {
                     row.forEach { label ->
+                        val buttonModifier = if (label == "=") {
+                            Modifier
+                                .weight(2f)
+                                .height(56.dp)
+                        } else {
+                            Modifier
+                                .weight(1f)
+                                .height(56.dp)
+                        }
                         CalculatorButton(
                             label = label,
                             onClick = {
                                 when (label) {
                                     "C" -> {
                                         expression = ""
+                                        result = ""
+                                    }
+                                    "⌫" -> {
+                                        if (expression.isNotEmpty()) {
+                                            expression = expression.dropLast(1)
+                                        }
                                         result = ""
                                     }
                                     "=" -> {
@@ -87,16 +101,8 @@ fun CalculatorScreen(modifier: Modifier = Modifier) {
                                     }
                                 }
                             },
-                            modifier = if (label == "=") Modifier
-                                .weight(1f)
-                                .height(56.dp)
-                            else Modifier.weight(1f).height(56.dp)
+                            modifier = buttonModifier
                         )
-                    }
-
-                    // Si la ligne ne remplit pas l'espace (cas "=" seul), ajouter un spacer
-                    if (row.size == 1) {
-                        Spacer(modifier = Modifier.weight(3f))
                     }
                 }
             }
