@@ -1,18 +1,31 @@
 <resources>
-    <string name="app_name" translatable="false">What Colour (2)</string>
+    <string name="app_name">Calculatrice App</string>
 
-    <string name="colour_black">Black</string>
-    <string name="colour_blue">Blue</string>
-    <string name="colour_red">Red</string>
-    <string name="colour_purple">Purple</string>
-    <string name="colour_green">Green</string>
-    <string name="colour_cyan">Cyan</string>
-    <string name="colour_yellow">Yellow</string>
-    <string name="colour_white">White</string>
-    <string name="colour_brown">Brown</string>
-    <string name="colour_orange">Orange</string>
-    <string name="colour_pink">Pink</string>
-    <string name="colour_grey">Grey</string>
+    <!-- Tabs -->
+    <string name="tab_calculator">Calculatrice</string>
+    <string name="tab_settings">Paramètres</string>
+    <string name="tab_converter">Convertisseur</string>
 
+    <!-- Settings Screen -->
+    <string name="settings_dark_mode">Mode Sombre</string>
+    <string name="settings_language">Langue</string>
+    <string name="language_french">Français</string>
+    <string name="language_english">Anglais</string>
+    <string name="language_spanish">Espagnol</string>
+    <string name="language_german">Allemand</string>
+
+    <!-- Calculator Screen -->
+    <string name="error_invalid_expression">Erreur</string>
+
+    <!-- Converter Screen -->
+    <string name="screen_title_converter">Convertisseur de devises</string>
+    <string name="converter_amount">Montant</string>
+    <string name="converter_from">De</string>
+    <string name="converter_to">À</string>
+    <string name="converter_button">Convertir</string>
+    <string name="currency_eur">Euro</string>
+    <string name="currency_usd">Dollar Américain</string>
+    <string name="currency_jpy">Yen Japonais</string>
+    <string name="currency_gbp">Livre Sterling</string>
 
 </resources>

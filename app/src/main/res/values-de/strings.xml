@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Rechner App</string>
+
+    <!-- Tabs -->
+    <string name="tab_calculator">Rechner</string>
+    <string name="tab_settings">Einstellungen</string>
+    <string name="tab_converter">Umrechner</string>
+
+    <!-- Settings Screen -->
+    <string name="settings_dark_mode">Dunkelmodus</string>
+    <string name="settings_language">Sprache</string>
+    <string name="language_french">Französisch</string>
+    <string name="language_english">Englisch</string>
+    <string name="language_spanish">Spanisch</string>
+    <string name="language_german">Deutsch</string>
+
+    <!-- Calculator Screen -->
+    <string name="error_invalid_expression">Fehler</string>
+
+    <!-- Converter Screen -->
+    <string name="screen_title_converter">Währungsrechner</string>
+    <string name="converter_amount">Betrag</string>
+    <string name="converter_from">Von</string>
+    <string name="converter_to">Nach</string>
+    <string name="converter_button">Umrechnen</string>
+    <string name="currency_eur">Euro</string>
+    <string name="currency_usd">US-Dollar</string>
+    <string name="currency_jpy">Japanischer Yen</string>
+    <string name="currency_gbp">Britisches Pfund</string>
+
+</resources>

@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Calculadora App</string>
+
+    <!-- Tabs -->
+    <string name="tab_calculator">Calculadora</string>
+    <string name="tab_settings">Ajustes</string>
+    <string name="tab_converter">Convertidor</string>
+
+    <!-- Settings Screen -->
+    <string name="settings_dark_mode">Modo Oscuro</string>
+    <string name="settings_language">Idioma</string>
+    <string name="language_french">Francés</string>
+    <string name="language_english">Inglés</string>
+    <string name="language_spanish">Español</string>
+    <string name="language_german">Alemán</string>
+
+    <!-- Calculator Screen -->
+    <string name="error_invalid_expression">Error</string>
+
+    <!-- Converter Screen -->
+    <string name="screen_title_converter">Convertidor de divisas</string>
+    <string name="converter_amount">Cantidad</string>
+    <string name="converter_from">De</string>
+    <string name="converter_to">A</string>
+    <string name="converter_button">Convertir</string>
+    <string name="currency_eur">Euro</string>
+    <string name="currency_usd">Dólar Estadounidense</string>
+    <string name="currency_jpy">Yen Japonés</string>
+    <string name="currency_gbp">Libra Esterlina</string>
+
+</resources>

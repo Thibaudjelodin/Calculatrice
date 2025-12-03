@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="Theme.AppCalculatrice" parent="android:Theme.Material.Light.NoActionBar" />
-
+    <!--
+        Pour que AppCompatActivity fonctionne, le thème de l'application doit hériter
+        d'une des variantes de Theme.AppCompat.
+    -->
+    <style name="Theme.AppCalculatrice" parent="Theme.AppCompat.Light.NoActionBar" />
 
 </resources>
