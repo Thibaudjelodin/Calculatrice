@@ -12,7 +12,7 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.compose.*
 import fr.eseo.b3.tj.appcalculatrice.ui.theme.CalculatorScreen
-import fr.eseo.b3.tj.appcalculatrice.ui.theme.GreenButton
+import fr.eseo.b3.tj.appcalculatrice.ui.theme.ColorTopBar
 import fr.eseo.b3.tj.appcalculatrice.ui.theme.WhiteText
 
 // 1. Définir les routes de navigation
@@ -56,7 +56,7 @@ fun MainScreenWithTopBar() {
                 TopAppBar(
                     title = { Text("Calculatrice App") },
                     colors = TopAppBarDefaults.topAppBarColors(
-                        containerColor = GreenButton,
+                        containerColor = ColorTopBar,
                         titleContentColor = WhiteText
                     )
                 )
@@ -67,7 +67,7 @@ fun MainScreenWithTopBar() {
 
                 TabRow(
                     selectedTabIndex = selectedTabIndex,
-                    containerColor = GreenButton,
+                    containerColor = ColorTopBar,
                     contentColor = WhiteText
                 ) {
                     screens.forEach { screen ->

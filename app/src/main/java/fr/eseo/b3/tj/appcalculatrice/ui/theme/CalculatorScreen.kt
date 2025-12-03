@@ -22,7 +22,7 @@ fun CalculatorScreen(modifier: Modifier = Modifier) {
     Column(
         modifier = modifier
             .fillMaxSize()
-            .background(BlackBackground)
+            .background(ColorBackground)
             .padding(16.dp)
     ) {
         // Affichage du résultat / expression
@@ -34,8 +34,8 @@ fun CalculatorScreen(modifier: Modifier = Modifier) {
             horizontalAlignment = Alignment.End
         ) {
             Text(
-                text = if (result.isNotEmpty()) result else expression.ifEmpty { "0" },
-                color = WhiteText,
+                text = result.ifEmpty { expression.ifEmpty { "0" } },
+                color = ColorText,
                 fontSize = 40.sp,
                 textAlign = TextAlign.Right,
                 modifier = Modifier.fillMaxWidth()
@@ -115,7 +115,7 @@ private fun CalculatorButton(label: String, onClick: () -> Unit, modifier: Modif
     Button(
         onClick = onClick,
         modifier = modifier,
-        colors = ButtonDefaults.buttonColors(containerColor = GreenButton, contentColor = WhiteText)
+        colors = ButtonDefaults.buttonColors(containerColor = ColorButton, contentColor = ColorText)
     ) {
         Text(text = label, fontSize = 20.sp)
     }
@@ -182,7 +182,7 @@ private fun evaluateExpression(expr: String): String {
         // Formatage: enlever .0 si entier
         return if (result % 1.0 == 0.0) result.toLong().toString() else result.toString()
     } catch (e: Exception) {
-        return "Erreur"
+        return "Error"
     }
 }
 
