@@ -50,9 +50,6 @@ fun SettingsScreen(
                 onCheckedChange = { settingsViewModel.setDarkTheme(it) }
             )
         }
-
-        Divider()
-
         LanguageSelector(settingsViewModel = settingsViewModel, onLocaleChange = onLocaleChange)
     }
 }
