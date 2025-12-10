@@ -24,8 +24,6 @@ class MainActivity : AppCompatActivity() {
             val isDarkTheme by settingsViewModel.isDarkTheme.collectAsState()
 
             AppCalculatriceTheme(darkTheme = isDarkTheme) {
-                // C'est la méthode moderne et recommandée.
-                // Elle gère la persistance et le redémarrage des activités pour nous.
                 MainScreenWithTopBar(onLocaleChange = { languageCode ->
                     val appLocale = LocaleListCompat.forLanguageTags(languageCode)
                     AppCompatDelegate.setApplicationLocales(appLocale)

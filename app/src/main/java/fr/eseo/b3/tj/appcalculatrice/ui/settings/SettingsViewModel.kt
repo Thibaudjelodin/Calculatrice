@@ -13,7 +13,6 @@ class SettingsViewModel(application: Application) : AndroidViewModel(application
 
     private val settingsDataStore = SettingsDataStore(application)
 
-    // Exposer l'état du thème comme un StateFlow
     val isDarkTheme: StateFlow<Boolean> = settingsDataStore.isDarkTheme
         .stateIn(
             scope = viewModelScope,
@@ -28,7 +27,6 @@ class SettingsViewModel(application: Application) : AndroidViewModel(application
         }
     }
 
-    // Exposer la langue comme un StateFlow
     val language: StateFlow<String> = settingsDataStore.language
         .stateIn(
             scope = viewModelScope,

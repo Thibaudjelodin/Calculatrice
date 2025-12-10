@@ -24,6 +24,8 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import fr.eseo.b3.tj.appcalculatrice.ui.theme.ColorButton
 import fr.eseo.b3.tj.appcalculatrice.ui.theme.ColorText
+import java.math.RoundingMode
+import java.text.DecimalFormat
 
 @Composable
 fun CalculatorScreen(modifier: Modifier = Modifier) {
@@ -35,7 +37,6 @@ fun CalculatorScreen(modifier: Modifier = Modifier) {
             .fillMaxSize()
             .padding(16.dp)
     ) {
-        // Affichage du résultat / expression
         Column(
             modifier = Modifier
                 .fillMaxWidth()
@@ -45,7 +46,7 @@ fun CalculatorScreen(modifier: Modifier = Modifier) {
         ) {
             Text(
                 text = result.ifEmpty { expression.ifEmpty { "0" } },
-                color = MaterialTheme.colorScheme.onSurface, // Correction : utiliser la couleur du thème
+                color = MaterialTheme.colorScheme.onSurface,
                 fontSize = 40.sp,
                 textAlign = TextAlign.Right,
                 modifier = Modifier.fillMaxWidth()
@@ -184,7 +185,11 @@ private fun evaluateExpression(expr: String): String {
             idx += 2
         }
 
-        return if (result % 1.0 == 0.0) result.toLong().toString() else result.toString()
+        // Utiliser DecimalFormat avec le motif demandé
+        val decimalFormat = DecimalFormat("#.0#####")
+        decimalFormat.roundingMode = RoundingMode.HALF_UP
+        // Remplacer la virgule par un point pour la cohérence
+        return decimalFormat.format(result).replace(',', '.')
     } catch (e: Exception) {
         return "Error"
     }

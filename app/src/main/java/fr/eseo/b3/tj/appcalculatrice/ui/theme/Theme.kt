@@ -13,7 +13,7 @@ private val DarkColorScheme = darkColorScheme(
     surface = ColorBackground,
     onPrimary = ColorText,
     onBackground = ColorText,
-    onSurface = ColorText // Le texte sur une surface sombre est blanc
+    onSurface = ColorText
 )
 
 private val LightColorScheme = lightColorScheme(
@@ -22,7 +22,7 @@ private val LightColorScheme = lightColorScheme(
     surface = Color.White,
     onPrimary = ColorText,
     onBackground = Color.Black,
-    onSurface = Color.Black // Le texte sur une surface claire est noir
+    onSurface = Color.Black
 )
 
 @Composable

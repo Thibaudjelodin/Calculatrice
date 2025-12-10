@@ -21,7 +21,6 @@ class ConverterViewModel : ViewModel() {
     val result: StateFlow<String> = _result.asStateFlow()
 
     fun convert(amount: String, fromCurrency: String, toCurrency: String) {
-        // Remplacer la virgule par un point pour la conversion
         val cleanAmount = amount.replace(",", ".")
         val amountValue = cleanAmount.toBigDecimalOrNull()
         if (amountValue == null) {
@@ -37,7 +36,6 @@ class ConverterViewModel : ViewModel() {
             return
         }
 
-        // Convertir le montant en Euro, puis de l'Euro vers la devise cible
         val amountInEur = amountValue.divide(fromRate, 4, RoundingMode.HALF_UP)
         val convertedAmount = amountInEur.multiply(toRate).setScale(2, RoundingMode.HALF_UP)
 
