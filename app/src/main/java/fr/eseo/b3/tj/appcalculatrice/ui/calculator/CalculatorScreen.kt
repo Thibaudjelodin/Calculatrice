@@ -131,7 +131,7 @@ private fun CalculatorButton(label: String, onClick: () -> Unit, modifier: Modif
     }
 }
 
-private fun isOperator(s: String): Boolean = s in listOf("+", "-", "×", "÷", "*", "/")
+private fun isOperator(s: String): Boolean = s in listOf("+", "-", "×", "÷", "*", "/",".")
 
 private fun evaluateExpression(expr: String): String {
     if (expr.isBlank()) return ""
