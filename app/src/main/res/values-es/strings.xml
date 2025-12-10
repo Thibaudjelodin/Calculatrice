@@ -18,7 +18,7 @@
     <string name="error_invalid_expression">Error</string>
 
     <!-- Converter Screen -->
-    <string name="screen_title_converter">Convertidor de divisas</string>
+    <string name="screen_title_converter">Convertidor de moneda</string>
     <string name="converter_amount">Cantidad</string>
     <string name="converter_from">De</string>
     <string name="converter_to">A</string>
